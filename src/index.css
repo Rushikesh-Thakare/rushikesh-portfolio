@@ -1,7 +1,10 @@
 *{
   margin: 0px;
   padding: 0px;
-  font-family: sans-serif, Helvetica, Arial, sans-serif;
+  font-family:fira code,nunito, sans-serif;
+}
+body{
+  background-color: #0d1117;
 }
 .navbar{
   background-color: black;
@@ -15,8 +18,8 @@
 
 }
 .navLogo{
-  height: 50px;
-  width: 50px;
+  height: 100%;
+  width: 100%;
   margin-left: 10px;
   width: 15%;
 }
@@ -36,15 +39,16 @@
 
 }
 .navLinks a:hover{
-  color: blue;
+  color: #58a6ff;
   animation: normal 1s ease-in-out 0s 1 normal forwards;
-  border-bottom: 2px solid blue;
+  border-bottom: 2px solid #58a6ff;
+  padding-bottom: 10px;
 }
 
 .navButton{
   width: 15%;
   height: 40px;
-  background-color: blueviolet;
+  background-color: #58a6ff;
   color: white;
   border: 1px solid black;
   border-radius: 5px;
@@ -52,6 +56,6 @@
   margin-right: 30px;
 }
 .navButton:hover{
-  background-color: blue;
+  background-color: #307ed7;
 
 }
