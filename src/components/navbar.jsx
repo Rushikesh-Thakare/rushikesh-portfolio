@@ -14,7 +14,7 @@ function Navbar() {
             </ul>
             <button className="navButton">Blogs</button>
         </nav>
-    )
+    );
 }
 
 export default Navbar;

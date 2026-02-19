@@ -3,13 +3,17 @@ import React from 'react';
 import "./index.css";
 import ReactDom from 'react-dom';
 import Navbar from "./components/navbar.jsx";
+import Hero from "./components/hero.jsx";
 
 
 
 
 function App() {
   return (
-    <Navbar />
+    <div className="app-container">
+      <Navbar />
+      <Hero />
+    </div>
   );
 }
 
