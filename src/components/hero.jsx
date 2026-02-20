@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../index.css";
-import illustration from "../assets/illustration1.svg"; // ✅ correct image import
-
-// ─── TypingText lives HERE in the same file ───────────────
+import illustration from "../assets/illustration1.svg"; 
 const TypingText = ({ words }) => {
   const [wordIndex, setWordIndex]   = useState(0);
   const [displayed, setDisplayed]   = useState("");
@@ -42,11 +40,20 @@ const roles = [
   "Turning Ideas Into Real Projects",
 ];
 
+// stats for hero section
+const stats = [
+    { number: "6+",  label: "Projects Built"    },
+    { number: "10+",  label: "Technologies"       },
+    { number: "100%",label: "Dedication"         },
+    { number: "∞",   label: "Passion for Coding"   },
+  ];
+
+
 function Hero() {  
   return (
     <div className="hero-section" id="home">
       <div className="hero-content">
-        <p className="hero-start">Hello! I am</p>
+        <p className="hero-start">Hello! I am....</p>
         <h2
          className="hero-name">
           Rushikesh <br />
@@ -65,7 +72,20 @@ function Hero() {
         <img src={illustration} alt="Illustration" />
       </div>
     </div>
+  
+  );
+}
+function Stats() {
+  return (
+    <div className="hero-stats">
+      {stats.map((stat, index) => (
+        <div key={index} className="hero-stats-items">
+          <span className="stat-num">{stat.number}</span> <br /> 
+          <span className="stat-label">{stat.label}</span>
+        </div>))
+      }  
+    </div>
   );
 }
 
-export default Hero;
+export { Hero, Stats };
