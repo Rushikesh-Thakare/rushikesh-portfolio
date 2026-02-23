@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { FaJava, FaReact, FaHtml5, FaCss3Alt, FaPython } from "react-icons/fa";
 import { SiJavascript, SiPostgresql, SiMongodb, SiN8N } from "react-icons/si";
 import { SiC } from "react-icons/si";
@@ -66,6 +67,8 @@ const skillsData = [
   },
 ];
 
+const tools = ["Git", "WordPress", "VS Code", "AISensy", "Linux"];
+
 export default function Skills() {
   useEffect(() => {
     const progresses = document.querySelectorAll(".progress");
@@ -79,8 +82,10 @@ export default function Skills() {
   }, []);
 
   return (
-    <section className="skills-section">
-      <h2 className="section-title">My Skills</h2>
+    <section className="skills-section" id="Skills">
+      <p className="skill-name">// skills</p>
+      <h2 className="section-title">My <span>Skills</span></h2>
+      <p className="skills-desc">Technologies I work with and tools I love</p>
 
       <div className="skills-container">
         {skillsData.map((skill, index) => (
@@ -105,6 +110,18 @@ export default function Skills() {
           </div>
         ))}
       </div>
+  <div className="tools-wrapper">
+  <div className="tools-card">
+    <h3>Tools & Technologies</h3>
+    <div className="tools-list">
+      {tools.map((tool, index) => (
+        <span className="tool-badge" key={index}>
+        {tool}
+        </span>
+      ))}
+    </div>
+   </div>
+   </div>
     </section>
   );
 }
