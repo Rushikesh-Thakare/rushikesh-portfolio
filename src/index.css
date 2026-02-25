@@ -184,6 +184,7 @@ TypingText {
   font-family: fira code, monospace;
   width: 60%;
   
+  
 }
 .stat-num {
   font-size: 2rem;
@@ -203,7 +204,7 @@ TypingText {
 .about-title {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #f78166;
+  color: #3fb950;
   font-family: "fira code", monospace;
   margin-bottom: 10px;
   margin-top: 70px;
@@ -264,12 +265,12 @@ TypingText {
 } 
 
 .skills-section {
-  background: #0d1117;
+  background: #161b22;
   padding: 80px 8%;
   margin-top: 0px;
 }
 .skill-name {
-  color: #f78166;
+  color: #3fb950;
   font-family: "fira code", monospace;
   font-size: 1.25rem;
   font-weight: bold;
@@ -432,121 +433,678 @@ TypingText {
 }
 
 /*  projects section */
-.project-card-holder {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+.project-section {
+  background: #0d1117;
+  padding: 80px 8%;
+  margin-top: 0px;
 }
 
-/* /* project section  */
+/* ── Section Labels ───────────────────────────────────────── */
+.project-section h3 {
+  color: #f78166;
+  font-family: "Fira Code", monospace;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-section h2 {
+  font-size: 2.4rem;
+  font-weight: 450;
+  letter-spacing: -0.01em;
+  color: white;
+  margin-top: 20px;
+}
+
+.project-section h2 span {
+  color: #58a6ff;
+}
+
+.project-desc {
+  font-size: 1rem;
+  color: #9aa4b2;
+  font-family: "Nunito", sans-serif;
+  text-align: start;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+/* ── 2-Column Grid ────────────────────────────────────────── */
+.project-card-holder {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+/* ── Each Project Block (card + desc + tags + links) ───────── */
+.project-top {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: default;
+}
+
+.project-top:hover {
+  border-color: #58a6ff;
+  box-shadow: 0 8px 32px rgba(88, 166, 255, 0.18);
+  transform: translateY(-5px);
+}
+
 
 .project-card {
-  display: flex;
-  gap: 40px;
-  background: linear-gradient(145deg, #161b22, #0d1117);
-  border: 1px solid #1f2937;
-  border-radius: 22px;
-  padding: 30px;
-  transition: 0.3s ease;
-  align-items: flex-start;
-}
-
-.project-card:hover {
-  border-color: #58a6ff;
-  box-shadow: 0 0 30px rgba(88, 166, 255, 0.2);
-  transform: translateY(-6px);
-}
-
-/* TOP SECTION (image left + title right) */
-.project-top {
-  flex: 0 0 380px;
-}
-
-.project-top img {
+  display: flex;           
+  flex-direction: row;
+  align-items: center;
+  gap: 18px;
+  background: transparent;
+  border: none;
+  padding: 0;
   width: 100%;
-  border-radius: 18px;
-  object-fit: cover;
+  height: auto;
 }
 
-.project-card:hover .project-top img {
-  transform: scale(1.05);
+
+.project-card img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;          
+  border: 1px solid #30363d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.project-top:hover .project-card img {
+  transform: scale(1.04);
+  box-shadow: 0 4px 20px rgba(88, 166, 255, 0.25);
+}
+
 
 .project-name {
-  font-size: 2rem;
-  color: #e6edf3;
-  margin-bottom: 20px;
+  color: #f0f6fc;
+  font-family: "Fira Code", monospace;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  flex: 1;                 
+  transition: color 0.2s ease;
 }
 
-.project-description {
-  color: #9AA4B2;
-  line-height: 1.7;
-  max-width: 400px;
-  margin-bottom: 20px;
+.project-top:hover .project-name {
+  color: #58a6ff;
 }
-/* Technologies */
+
+/* ── Description — below the card row  */
+.project-description {
+  color: #8b949e;
+  font-size: 0.9rem;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.75;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Technology Tags */
 .project-technologies {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .tech-tag {
-  width: fit-content;
-  padding: 8px 16px;
-  border-radius: 20px;
-  border: 1px solid #30363d;
+  background: rgba(88, 166, 255, 0.12);
   color: #58a6ff;
-  background: rgba(88, 166, 255, 0.08);
+  border: 1px solid rgba(88, 166, 255, 0.3);
+  padding: 3px 11px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-family: "Fira Code", monospace;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .tech-tag:hover {
-  background: #58a6ff;
-  color: #0d1117;
+  background: rgba(88, 166, 255, 0.22);
+  transform: translateY(-1px);
 }
 
-/* Buttons */
+/* ── Links — View Project + GitHub ────────────────────────── */
 .project-links {
   display: flex;
-  gap: 20px;
+  gap: 12px;
+  margin-top: 4px;
 }
 
+
 .project-links a {
-  padding: 12px 24px;
-  border-radius: 12px;
-  border: 1px solid #58a6ff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-family: "Fira Code", monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
   text-decoration: none;
-  color: #58a6ff;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
+
 
 .project-links a:first-child {
   background: #58a6ff;
   color: #0d1117;
 }
 
-.project-links a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 20px rgba(88, 166, 255, 0.5);
+.project-links a:first-child:hover {
+  background: #79baff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(88, 166, 255, 0.4);
 }
 
 
-/* Prevent full width stretching */
-.Projects {
-  max-width: 1100px;
-  margin: 0 auto;
+.project-links a:last-child {
+  background: transparent;
+  color: #58a6ff;
+  border: 1.5px solid #58a6ff;
 }
 
-/* Responsive */
+.project-links a:last-child:hover {
+  background: rgba(88, 166, 255, 0.1);
+  transform: translateY(-2px);
+}
+
 @media (max-width: 900px) {
-  .project-top {
+  .project-card-holder {
+    grid-template-columns: 1fr;  
+  }
+}
+
+@media (max-width: 480px) {
+  .project-section {
+    padding: 60px 5%;
+  }
+
+  .project-card {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .project-top img {
+  .project-card img {
     width: 100%;
-    height: 200px;
+    height: 160px;
   }
+}
+
+
+
+/* //testomonials */
+
+.testimonials-section {
+  background: #161b22;       
+  padding: 80px 8%;
+}
+
+
+.testi-label {
+  color: #3fb950;             
+  font-family: "Fira Code", monospace;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testi-heading {
+  font-size: 2.4rem;
+  font-weight: 450;
+  letter-spacing: -0.01em;
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.testi-heading span {
+  color: #58a6ff;
+}
+
+.testi-desc {
+  font-size: 1rem;
+  color: #9aa4b2;
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 44px;
+}
+
+/* ── Carousel Wrapper — positions arrows on the sides */
+.testi-carousel-wrapper {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ── The Card ─ */
+.testi-card {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  padding: 48px 52px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: testiSlideIn 0.4s ease both;
+}
+
+@keyframes testiSlideIn {
+  from { opacity: 0; transform: translateX(24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Avatar circle */
+.testi-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(88, 166, 255, 0.1);
+  border: 2px solid #58a6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  margin: 0 auto 20px;
+}
+
+/* The testimonial text */
+.testi-text {
+  color: #c9d1d9;
+  font-size: 1rem;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.9;
+  font-style: italic;
+  max-width: 520px;
+  margin: 0 auto 24px;
+}
+
+/* Person name + role */
+.testi-person {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.testi-name {
+  font-family: "Fira Code", monospace;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #f0f6fc;
+}
+
+.testi-role {
+  font-size: 0.82rem;
+  color: #8b949e;
+}
+
+/* ── Arrow Buttons ────────────────────────────────────────── */
+.testi-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #161b22;
+  border: 1px solid #30363d;
+  color: #c9d1d9;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.testi-arrow:hover {
+  border-color: #58a6ff;
+  color: #58a6ff;
+  background: rgba(88, 166, 255, 0.08);
+}
+
+.testi-arrow-left  { left:  -24px; }
+.testi-arrow-right { right: -24px; }
+
+/* ── Dot Indicators ──────────────────────────────────────── */
+.testi-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.testi-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #30363d;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.testi-dot-active {
+  background: #58a6ff;
+  transform: scale(1.35);
+}
+
+/* Slide counter */
+.testi-counter {
+  text-align: center;
+  margin-top: 10px;
+  font-family: "Fira Code", monospace;
+  font-size: 0.78rem;
+  color: #8b949e;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .testi-card        { padding: 36px 28px; }
+  .testi-arrow-left  { left:  -16px; }
+  .testi-arrow-right { right: -16px; }
+}
+
+@media (max-width: 480px) {
+  .testi-arrow { display: none; } /* hide arrows on very small screens */
+}
+
+
+
+/* Blog section */
+
+.blog-section {
+  background: #0d1117;
+  padding: 80px 8%;
+}
+
+/* Full blog page gets extra top padding (for the back button) */
+.blog-page {
+  padding-top: 100px;
+}
+
+/* ── Heading Row (heading left, button right) ─────────────── */
+.blog-heading-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+/* ── Section Labels ───────────────────────────────────────── */
+.blog-label {
+  color: #58a6ff;
+  font-family: "Fira Code", monospace;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  /* NOT centered — left-aligned to match heading */
+}
+
+.blog-heading {
+  font-size: 2.4rem;
+  font-weight: 450;
+  letter-spacing: -0.01em;
+  color: white;
+  margin-top: 10px;
+}
+
+.blog-heading span {
+  color: #58a6ff;
+}
+
+.blog-desc {
+  font-size: 1rem;
+  color: #9aa4b2;
+  font-family: "Nunito", sans-serif;
+  margin-top: 8px;
+}
+
+/* ── View All Button ──────────────────────────────────────── */
+.blog-view-all-btn {
+  background: linear-gradient(135deg, #58a6ff, #7c5aee);
+  color: #fff;
+  border: none;
+  padding: 9px 20px;
+  border-radius: 8px;
+  font-family: "Fira Code", monospace;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 14px rgba(88, 166, 255, 0.3);
+}
+
+.blog-view-all-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(88, 166, 255, 0.5);
+}
+
+/* ── Back Button (used on full blog page & post reader) ────── */
+.blog-back-btn {
+  background: transparent;
+  color: #58a6ff;
+  border: 1.5px solid #58a6ff;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-family: "Fira Code", monospace;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.blog-back-btn:hover {
+  background: rgba(88, 166, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ── 3-Column Blog Grid ───────────────────────────────────── */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ── Blog Card ────────────────────────────────────────────── */
+.blog-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  overflow: hidden;           /* so banner doesn't overflow rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+  border-color: #58a6ff;
+  box-shadow: 0 8px 30px rgba(88, 166, 255, 0.18);
+  transform: translateY(-5px);
+}
+
+/* Emoji banner at top of card */
+.blog-card-banner {
+  background: linear-gradient(135deg, rgba(88,166,255,0.1), rgba(124,90,238,0.07));
+  border-bottom: 1px solid #30363d;
+  padding: 28px 20px 18px;
+  font-size: 3rem;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.blog-card:hover .blog-card-banner {
+  background: linear-gradient(135deg, rgba(88,166,255,0.18), rgba(124,90,238,0.14));
+}
+
+/* Card body — the text content */
+.blog-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Tag + read time row */
+.blog-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Blue pill tag */
+.blog-tag {
+  background: rgba(88, 166, 255, 0.12);
+  color: #58a6ff;
+  border: 1px solid rgba(88, 166, 255, 0.3);
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.73rem;
+  font-family: "Fira Code", monospace;
+}
+
+.blog-read-time {
+  color: #8b949e;
+  font-size: 0.78rem;
+}
+
+/* Card title */
+.blog-card-title {
+  font-family: "Fira Code", monospace;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f0f6fc;
+  line-height: 1.5;
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+.blog-card:hover .blog-card-title {
+  color: #58a6ff;
+}
+
+/* Short description */
+.blog-card-desc {
+  color: #8b949e;
+  font-size: 0.84rem;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Footer row — date left, Read link right */
+.blog-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.blog-date {
+  color: #8b949e;
+  font-size: 0.78rem;
+}
+
+.blog-read-link {
+  color: #58a6ff;
+  font-family: "Fira Code", monospace;
+  font-size: 0.82rem;
+  transition: letter-spacing 0.2s ease;
+}
+
+.blog-card:hover .blog-read-link {
+  letter-spacing: 0.04em;
+}
+
+/* ── Single Post Reader Page ──────────────────────────────── */
+.blog-post-page {
+  background: #0d1117;
+  padding: 100px 8% 80px;
+  min-height: 100vh;
+}
+
+.blog-post-emoji {
+  font-size: 4.5rem;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+/* Tag + date + read time row for post header */
+.blog-post-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.blog-post-title {
+  font-family: "Fira Code", monospace;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  color: #f0f6fc;
+  text-align: center;
+  line-height: 1.35;
+  max-width: 700px;
+  margin: 0 auto 36px;
+}
+
+/* Content card */
+.blog-post-content {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  padding: 36px 42px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Each paragraph */
+.blog-post-para {
+  color: #8b949e;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.97rem;
+  line-height: 1.9;
+  margin-bottom: 22px;
+}
+
+.blog-post-para:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .blog-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .blog-grid          { grid-template-columns: 1fr; }
+  .blog-heading-row   { flex-direction: column; align-items: flex-start; }
+  .blog-post-content  { padding: 24px 20px; }
 }
