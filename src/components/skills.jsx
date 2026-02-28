@@ -82,7 +82,7 @@ export default function Skills() {
   }, []);
 
   return (
-    <section className="skills-section" id="Skills">
+    <section className="skills-section" id="skills" >
       <p className="skill-name">// skills</p>
       <h2 className="section-title">My <span>Skills</span></h2>
       <p className="skills-desc">Technologies I work with and tools I love</p>

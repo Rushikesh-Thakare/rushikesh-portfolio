@@ -10,8 +10,8 @@ import Skills from './components/skills.jsx';
 import Projects from './components/projects.jsx';
 import Testimonials from './components/testimonials.jsx';
 import Blog from './components/blogs.jsx';
-import Contact from "./components/contact.jsx";
-import Footer from "./components/footer.jsx";
+import Contact from './components/contact.jsx';
+import Footer from './components/footer.jsx';
 
 
 

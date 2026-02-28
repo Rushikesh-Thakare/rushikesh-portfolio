@@ -8,8 +8,8 @@ const projectsData = [
     name: "LINA: An AI Voice Assistant for Linux OS",
     description: "LINA is a desktop voice assistant designed for Linux users. It integrates speech-to-text processing, natural language understanding, and system command execution to allow hands-free interaction with the operating system. The assistant can open applications, fetch system information, automate repetitive tasks, and respond intelligently to user queries.",
     technologies: ["Python", "SpeechRecognition", "NLP", "Linux Shell Commands", "APIs", "TTS", "RAG", "LLMs","FAISS DB"],
-    link: "https://github.com/rushikesh-portfolio/project-one",
-    github: "https://github.com/rushikesh-portfolio/project-one"
+    link: "https://github.com/Rushikesh-Thakare/LINA-v3",
+    github: "https://github.com/Rushikesh-Thakare/LINA-v3"
   },
     {
       id: 2,
@@ -17,7 +17,8 @@ const projectsData = [
       name: "Rushi's Gym (A Gym Website)",
       description: "Created a fully responsive gym website using WordPress, designed to provide a smooth and engaging user experience for visitors interested in fitness and training services. The site features structured content, clear service offerings, and easy navigation for users of all devices.",
       technologies: ["WordPress", "Elementor", "Custom CSS", "Hosting & Deployment"],
-      link: "https://kiranmulay.in/rishikesh/"
+      link: "https://kiranmulay.in/rishikesh/",
+      github: "https://kiranmulay.in/rishikesh/"
     },
     {
       id: 3,
@@ -25,7 +26,8 @@ const projectsData = [
       name: "Sales Prediction for Retail Shop (Machine Learning)",
       description: "This project analyzes historical retail sales data to forecast future sales trends using regression models. The system helps business owners make data-driven decisions for inventory management and revenue optimization.",
       technologies: ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Jupyter Notebook"],
-      github: "https://github.com/rushikesh-portfolio/project-three"
+      github: "https://github.com/Rushikesh-Thakare/sales-prediction-for-retail-shop",
+      link: "https://github.com/Rushikesh-Thakare/sales-prediction-for-retail-shop/blob/main/README.md"
     },
     {
         id: 4,
@@ -33,7 +35,8 @@ const projectsData = [
         name: "An Email Automation Using AI Agent",
         description: "Built an AI-powered email automation system using AI agents and n8n to automatically classify incoming emails and generate context-aware replies. The system analyzes email content, detects intent (such as support, sales, or general inquiries), and triggers intelligent automated responses through a structured workflow. This project demonstrates my ability to combine AI-driven decision-making with workflow automation to create efficient, scalable communication systems.",
         technologies: ["AI Agents", "n8n (Workflow Automation)", "Email APIs (IMAP/SMTP)", "LLM integration"],
-        github: "https://github.com/rushikesh-portfolio/project-four"
+        github: "https://github.com/Rushikesh-Thakare/AI-Gmail-Email-Classifier-",
+        link: "https://github.com/Rushikesh-Thakare/AI-Gmail-Email-Classifier-/blob/main/README.md"
     }
 ];
 

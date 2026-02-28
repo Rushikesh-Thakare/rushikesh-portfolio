@@ -9,7 +9,13 @@ function Footer() {
   return (
     <footer id="footer" className="footer">
       <p>© {currentYear} Rushikesh Thakare. All rights reserved.</p>
-      <p className="foot-icons">Made with LOVE by Rushikesh Thakare</p>
+      <p className="foot-icons">
+        Made with 
+        <FavoriteBorderIcon sx={{ fontSize: 16, color: '#f78166' }} />
+        and 
+        <CoffeeIcon sx={{ fontSize: 16, color: '#f78166' }} />
+         by Rushikesh Thakare
+        </p>
     </footer>
   );
 }

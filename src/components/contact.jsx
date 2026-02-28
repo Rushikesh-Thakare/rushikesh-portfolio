@@ -47,7 +47,8 @@ function Contact() {
 
   // ── Social Links ──────────────────────────────────────────
   const socials = [
-    { label: "GitHub", icon: <GitHubIcon />, href: "https://github.com/Rushikesh-Thakare"   },
+    { label: "GitHub", icon: <GitHubIcon />, href: "https://github.com/Rushikesh-Thakare"
+    },
     { label: "LinkedIn", icon: <LinkedInIcon />, href: "https://www.linkedin.com/in/rushikesh-thakare-a58526321" },
     { label: "Instagram", icon: <InstagramIcon />,  href: "https://www.instagram.com/rushii_thakare/"  },
     { label: "LeetCode", icon: <CodeIcon />, href: "https://leetcode.com/u/rushi_thakare/" },
@@ -86,14 +87,14 @@ function Contact() {
 
           {/* Social Links */}
           <div className="contact-socials">
-            <p className="contact-socials-title">// social_links</p>
+            <p className="contact-socials-title">// Connect with me on Social Media</p>
             <div className="contact-socials-row">
               {socials.map(({ label, icon, href }) => (
                 <a
                   key={label}
                   href={href}
                   target="_blank"
-                  className="contact-social-btn"
+                  className={`contact-social-btn ${label.toLowerCase()}`}
                 >
                   {icon}
                   <span className="contact-social-label">{label}</span>

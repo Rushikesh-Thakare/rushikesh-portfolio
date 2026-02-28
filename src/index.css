@@ -7,7 +7,7 @@ body{
   background-color: #0d1117;
 }
 .navbar{
-  background-color: #19202c;
+  background-color:#161b22;
   width: 100%;
   height: 80px;
   padding: 10px;
@@ -48,22 +48,40 @@ body{
   color: #58a6ff;
   transition: all 0.35s ease-in-out;
   border-bottom: 2px solid #58a6ff;
-  padding-bottom: 5px;
+  padding-bottom: 3px;
+  transform: translateY(-2px);
 }
 
-.navButton{
-  width: 100px;
-  height: 40px;
-  background-color: #58a6ff;
-  color: white;
-  border: 1px solid black;
-  border-radius: 5px;
+.navContact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 22px;
+  font-family: "Fira Code", monospace;
+  font-weight: 600;
+  font-size: 0.85rem;
+
+  background: linear-gradient(135deg, #58a6ff, #7c5aee);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
-  margin-right: 30px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 14px rgba(88, 166, 255, 0.3);
+  text-decoration: none;   
+  margin-right: 30px;      
 }
-.navButton:hover{
-  background-color: #307ed7;
-  transition: all 0.35s ease-in-out;
+
+.navContact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(88, 166, 255, 0.5);
+}
+
+.navContact:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 12px rgba(88, 166, 255, 0.35);
 }
 
 #home {
@@ -1257,16 +1275,33 @@ TypingText {
   display: inline-flex;
   align-items: center;
 }
-
 .contact-social-btn:hover {
   background: rgba(88, 166, 255, 0.12);
   transform: translateY(-2px);
   box-shadow: 0 4px 14px rgba(88, 166, 255, 0.25);
 }
 
-/* ════════════════════════════════════════
-   RIGHT — Contact Form
-════════════════════════════════════════ */
+.facebook:hover {
+  background-color: #145DBF;
+}
+
+
+.instagram:hover {
+  background-color: #C13584;
+}
+
+.linkedin:hover {
+  background-color: #004182;
+}
+
+.leetcode:hover {
+  background-color: #CC8400;
+}
+
+.github:hover {
+  background-color: #333333;
+}
+
 
 .contact-form {
   background: #0d1117;
@@ -1417,6 +1452,9 @@ TypingText {
   padding: 20px 8%;
   bottom: 0px;
 }
-.footer span {
-padding-top: 10px;
+.foot-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
+
