@@ -65,7 +65,7 @@ function Hero() {
         </p>
         <div className="hero-buttons">
           <a href="#projects" className="hero-project">View My Work</a>
-          <a href="#" className="hero-resume">My Resume</a>
+          <a href="https://drive.google.com/file/d/1wl6YZ7zOedL-BGDj075ZDyWRj1uk773T/view?usp=sharing" className="hero-resume" target="_blank" rel="noopener noreferrer">My Resume</a>
         </div>
       </div>
       <div className="hero-image">

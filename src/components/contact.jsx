@@ -18,6 +18,7 @@ function Contact() {
 
   // Shows success message after form is submitted
   const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   // Tracks which field is currently focused (for highlight effect)
   const [focused, setFocused] = useState("");
@@ -29,12 +30,37 @@ function Contact() {
   };
 
   // ── Handle Submit ─────────────────────────────────────────
-  const handleSubmit = (e) => {
-    e.preventDefault(); 
-    setSubmitted(true);
-    setForm({ name: "", email: "", subject: "", message: "" });
-    alert(`Thank You ${form.name}!, I Will reach you soon.`);
-    setTimeout(() => setSubmitted(false), 4000);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    const formData = new FormData();
+    formData.append("access_key", "acb8e082-9041-411b-b7cf-1cac9e764990");
+    formData.append("name", form.name);
+    formData.append("email", form.email);
+    formData.append("subject", form.subject || "New Contact Form Submission");
+    formData.append("message", form.message);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+        setForm({ name: "", email: "", subject: "", message: "" });
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("Failed to send message. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   // ── Contact Info Data ─────────────────────────────────────
@@ -185,8 +211,8 @@ function Contact() {
           </div>
 
           {/* Submit Button */}
-          <button type="submit" className="contact-submit-btn">
-            Send Message
+          <button type="submit" className="contact-submit-btn" disabled={isLoading}>
+            {isLoading ? "Sending..." : "Send Message"}
           </button>
 
         </form>
