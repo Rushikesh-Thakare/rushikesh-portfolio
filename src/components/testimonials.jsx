@@ -3,7 +3,7 @@ import "../index.css";
 import kiranSirImg from "../assets/kiran-sir-img.png";
 import kiranImg from "../assets/kiran.png";
 import yogeshImg from "../assets/yogesh.png";
-import atulImg from "../assets/atul.png";
+import atulImg from "../assets/Atul.png";
 
 const testimonialsData = [
   {

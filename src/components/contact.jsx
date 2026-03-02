@@ -120,6 +120,7 @@ function Contact() {
                   key={label}
                   href={href}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={`contact-social-btn ${label.toLowerCase()}`}
                 >
                   {icon}
