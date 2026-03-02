@@ -53,7 +53,8 @@ function Projects() {
             <p className="project-desc">Things I've built and things I'm building</p>
             <div className="project-card-holder">
                 {projectsData.map((project) => (
-                    <div className="project-top"><div key={project.id} className="project-card">
+                    <div key={project.id} className="project-top">
+                        <div className="project-card">
                         <img src={project.url} alt={project.name} />
                         <h3 className="project-name">{project.name}</h3>
                     </div>
