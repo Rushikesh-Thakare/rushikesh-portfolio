@@ -1,12 +1,14 @@
 import React from "react";
 import "../index.css";
+import profilePic from "../assets/rushikesh_photo.png";
+
 function About() {
     return (
         <div id="about">
             <h4 className="about-title">//About_Me</h4>
             <div className="about-section">
                 <div className="about-img">
-                    <img src="../src/assets/rushikesh_photo.png" alt="Profile" className="profile-pic" />
+                    <img src={profilePic} alt="Profile" className="profile-pic" />
                 </div>
                 <div className="about-content">
                     <h3 className="about-start">Who Am <span>I?</span></h3>

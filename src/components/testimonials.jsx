@@ -1,33 +1,37 @@
 import React, { useState, useEffect } from "react";
 import "../index.css";
+import kiranSirImg from "../assets/kiran-sir-img.png";
+import kiranImg from "../assets/kiran.png";
+import yogeshImg from "../assets/yogesh.png";
+import atulImg from "../assets/atul.png";
 
 const testimonialsData = [
   {
     id: 1,
     name: "Kiran Mulay",
     role: "Project Manager & Partner at GiGaWebZone LLP",
-    avatar: "../src/assets/kiran-sir-img.png",
+    avatar: kiranSirImg,
     text: "Rushikesh consistently delivering high-quality work during his internship. He quickly adapts to new technologies, especially AI, Web Development and automation, and always looks for ways to improve solutions beyond the assigned task."
   },
   {
     id: 2,
     name: "Kiran Satihal",
     role: "Project Teammate",
-    avatar: "../src/assets/kiran.png",
+    avatar: kiranImg,
     text: "I’ve worked with Rushikesh on multiple academic projects, and he’s someone you can completely rely on. He doesn’t just do his part — he makes sure the entire project runs smoothly. His technical skills are solid, especially in development and AI-related tasks. Even during tight deadlines, he stays calm and focused. Working with him always feels organized and productive."
   },
   {
     id: 3,
     name: "Yogesh Bhoi",
     role: "Adv. Bombay High court",
-    avatar: "../src/assets/yogesh.png",
+    avatar: yogeshImg,
     text: "Rushikesh built my professional portfolio website with great attention to detail and clarity. He understood my requirements patiently and translated them into a clean and professional design. Throughout the process, he communicated clearly and handled revisions without hesitation. The final result exceeded my expectations. I would confidently recommend him for web development projects."
   },
   {
     id: 4,
     name: "Atul Solanke",
     role: "Hackathon Partner",
-    avatar: "../src/assets/atul.png",
+    avatar: atulImg,
     text: "Under hackathon pressure, Rushikesh handled complex technical tasks confidently. His AI and automation knowledge gave our team a strong edge, and he’s a dependable collaborator."
   }
 ];
