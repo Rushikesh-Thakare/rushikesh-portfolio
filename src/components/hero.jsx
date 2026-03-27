@@ -54,11 +54,11 @@ function Hero() {
     <div className="hero-section" id="home">
       <div className="hero-content">
         <p className="hero-start">Hello! I am....</p>
-        <h2
+        <h1
          className="hero-name">
           Rushikesh <br />
           <span className="thakare">Thakare</span>
-        </h2>
+        </h1>
         <TypingText words={roles} />
         <p className="hero-description">
           3rd Year Diploma student in Computer Engineering passionate about building scalable web applications, intelligent systems, and automation that solve real-world problems.
@@ -69,7 +69,7 @@ function Hero() {
         </div>
       </div>
       <div className="hero-image">
-        <img src={illustration} alt="Illustration" />
+        <img src={illustration} alt="Developer workspace illustration" />
       </div>
     </div>
   

@@ -8,7 +8,7 @@ function About() {
             <h4 className="about-title">//About_Me</h4>
             <div className="about-section">
                 <div className="about-img">
-                    <img src={profilePic} alt="Profile" className="profile-pic" />
+                    <img src={profilePic} alt="Rushikesh Thakare - Computer Engineering Student and Developer" className="profile-pic" />
                 </div>
                 <div className="about-content">
                     <h3 className="about-start">Who Am <span>I?</span></h3>

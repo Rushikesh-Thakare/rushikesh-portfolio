@@ -85,6 +85,49 @@ function BlogAllPosts({ onBack, onReadPost }) {
 
 // ── Single Post Reader ────────────────────────────────────────
 function BlogPostReader({ post, onBack }) {
+  // Smart content parser for better formatting
+  const parseContent = (content) => {
+    const paragraphs = content.split("\n\n").filter(p => p.trim());
+    
+    return paragraphs.map((para, i) => {
+      const trimmed = para.trim();
+      
+      // Detect section headers (end with colon or are short uppercase)
+      if (trimmed.endsWith(":") || (trimmed.length < 50 && trimmed === trimmed.toUpperCase() && trimmed.length > 3)) {
+        return (
+          <p key={i} className="blog-post-para section-header">
+            {trimmed}
+          </p>
+        );
+      }
+      
+      // Detect code blocks (contain special code syntax)
+      if (trimmed.includes("function") || trimmed.includes("const") || trimmed.includes(".then") || trimmed.includes("=>") || trimmed.includes("await")) {
+        return (
+          <p key={i} className="blog-post-para code-block">
+            {trimmed}
+          </p>
+        );
+      }
+      
+      // Detect list items (start with -, •, or *)
+      if (trimmed.match(/^[-•*]\s/) || trimmed.match(/^\d+\.\s/)) {
+        return (
+          <p key={i} className="blog-post-para list-item">
+            {trimmed.replace(/^[-•*]\s/, "").replace(/^\d+\.\s/, "")}
+          </p>
+        );
+      }
+      
+      // Regular paragraph
+      return (
+        <p key={i} className="blog-post-para">
+          {trimmed}
+        </p>
+      );
+    });
+  };
+
   return (
     <section id="blogs" className="blog-post-page">
       {/* Back button */}
@@ -101,11 +144,9 @@ function BlogPostReader({ post, onBack }) {
       </div>
       <h1 className="blog-post-title">{post.title}</h1>
 
-      {/* Post content — each paragraph separated */}
+      {/* Post content — intelligently formatted */}
       <div className="blog-post-content">
-        {post.content.split("\n\n").map((para, i) => (
-          <p key={i} className="blog-post-para">{para}</p>
-        ))}
+        {parseContent(post.content)}
       </div>
     </section>
   );

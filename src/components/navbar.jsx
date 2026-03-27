@@ -9,7 +9,7 @@ function Navbar() {
     return (
         <nav className="navbar">
 
-            <img className="navLogo" src={logo} alt="Logo" />
+            <img className="navLogo" src={logo} alt="Rushikesh Thakare Portfolio Logo" />
 
             {/* Backdrop overlay - closes menu when clicked */}
             {menuOpen && (
