@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rushikeshthakare.vercel.app/sitemap.xml
+Sitemap: https://rushikeshthakare.in/sitemap.xml

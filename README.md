@@ -8,7 +8,7 @@ This portfolio reflects my journey in Software Engineering and highlights my wor
 
 ## 🌐 Live Demo
 
-👉 [View Live Portfolio](https://rushikeshthakare.vercel.app/)
+👉 [View Live Portfolio](https://rushikeshthakare.in/)
 
 ---
 
@@ -68,7 +68,7 @@ If you'd like to collaborate or connect:
 
 - LinkedIn: https://www.linkedin.com/in/rushikesh-thakare-a58526321
 - Email: rushikesht686@gmail.com
-- Portfolio: https://rushikeshthakare.vercel.app/
+- Portfolio: https://rushikeshthakare.in/
 
 ---
 
